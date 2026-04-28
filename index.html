@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Minta Duit" />
+    <title>Minta Duit</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-label="Minta Duit support resistance calculator">
+      <header class="topbar">
+        <div class="brand" aria-label="Minta Duit">
+          <div class="brand-mark">
+            <span></span>
+            <i></i>
+          </div>
+          <div>
+            <strong>Minta Duit</strong>
+          </div>
+        </div>
+        <button class="icon-button" id="installButton" type="button" aria-label="Install app" title="Install">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14" />
+          </svg>
+        </button>
+      </header>
+
+      <section class="input-panel" aria-label="Input harga">
+        <div class="controls">
+          <div class="symbol-pill" aria-label="Symbol">XAUUSD</div>
+          <select id="timeframeSelect" aria-label="Timeframe">
+            <option value="h1">H1</option>
+            <option value="h4">H4</option>
+            <option value="day">Daily</option>
+            <option value="week">Weekly</option>
+            <option value="month">Month</option>
+            <option value="quarter">Quarter</option>
+            <option value="semester">Semester</option>
+            <option value="year">Year</option>
+          </select>
+          <button class="toggle-button" id="autoButton" type="button" aria-pressed="false">AUTO</button>
+          <button id="updateButton" type="button">UPDATE</button>
+        </div>
+        <p class="status-line" id="statusLine">Manual mode</p>
+
+        <div class="price-grid" aria-label="Harga sumber">
+          <div>
+            <span>OB</span>
+            <strong id="openBefore">2772.342</strong>
+          </div>
+          <div>
+            <span>HB</span>
+            <strong id="highBefore">2775.084</strong>
+          </div>
+          <div>
+            <span>LB</span>
+            <strong id="lowBefore">2770.058</strong>
+          </div>
+          <div>
+            <span>ON</span>
+            <strong id="openNow">2772.095</strong>
+          </div>
+          <div>
+            <span>HN</span>
+            <strong id="highNow">2774.311</strong>
+          </div>
+          <div>
+            <span>LN</span>
+            <strong id="lowNow">2772.058</strong>
+          </div>
+          <div class="wide">
+            <span>Now</span>
+            <strong id="currentPrice">2772.095</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="insight-panel" aria-label="Trend dan tugas">
+        <div>
+          <span>Jika OP</span>
+          <strong id="jikaOp"></strong>
+        </div>
+        <div>
+          <span>Trend</span>
+          <strong id="trend"></strong>
+        </div>
+        <div>
+          <span>Move</span>
+          <strong id="move"></strong>
+        </div>
+        <div class="wide">
+          <span>Tugas</span>
+          <strong id="tugas"></strong>
+        </div>
+      </section>
+
+      <section class="results-panel" aria-label="Hasil support resistance">
+        <div class="result-row resistance">
+          <span>R4</span>
+          <output id="r4"></output>
+        </div>
+        <div class="result-row resistance">
+          <span>R3</span>
+          <output id="r3"></output>
+        </div>
+        <div class="result-row resistance">
+          <span>R2</span>
+          <output id="r2"></output>
+        </div>
+        <div class="result-row resistance">
+          <span>R1</span>
+          <output id="r1"></output>
+        </div>
+        <div class="result-row pivot">
+          <span>Pivot</span>
+          <output id="pivot"></output>
+        </div>
+        <div class="result-row support">
+          <span>S1</span>
+          <output id="s1"></output>
+        </div>
+        <div class="result-row support">
+          <span>S2</span>
+          <output id="s2"></output>
+        </div>
+        <div class="result-row support">
+          <span>S3</span>
+          <output id="s3"></output>
+        </div>
+        <div class="result-row support">
+          <span>S4</span>
+          <output id="s4"></output>
+        </div>
+      </section>
+    </main>
+
+    <script src="./src/app.js" type="module"></script>
+  </body>
+</html>
